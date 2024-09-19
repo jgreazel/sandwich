@@ -1,0 +1,39 @@
+{
+  "Id": "MakePBJ",
+  "Version": 1,
+  "DataType": "SandwichComponent.MakePBJData, SandwichComponent",
+  "Steps": [
+    {
+      "Id": "Apply Peanut Butter",
+      "StepType": "SandwichComponent.ApplyPB, SandwichComponent",
+      "NextStepId": "Apply Jelly",
+      "Inputs": {
+        "Input": "data.Sandwich"
+      },
+      "Outputs": {
+        "Sandwich": "step.Output"
+      }
+    },
+    {
+      "Id": "Apply Jelly",
+      "StepType": "SandwichComponent.ApplyJelly, SandwichComponent",
+      "NextStepId": "Plate Sandwich",
+      "Inputs": {
+        "Input": "data.Sandwich"
+      },
+      "Outputs": {
+        "Sandwich": "step.Output"
+      }
+    },
+    {
+      "Id": "Plate Sandwich",
+      "StepType": "SandwichComponent.PlateSandwich, SandwichComponent",
+      "Inputs": {
+        "Input": "data.Sandwich"
+      },
+      "Outputs": {
+        "Sandwich": "step.Output"
+      }
+    }
+  ]
+}
